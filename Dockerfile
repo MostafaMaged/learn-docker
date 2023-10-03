@@ -14,4 +14,4 @@ FROM base as production
 
 RUN npm install --only=production
 COPY . .
-CMD ["node", "run", "starft"]
+CMD ["npm", "run", "start"]
