@@ -2,6 +2,7 @@ version: "3"
 services:
   web-app:
     container_name: express-node-app-container
+    image: mostafamaged/learning
     ports:
       - 4000:4000
     env_file:

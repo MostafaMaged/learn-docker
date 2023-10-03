@@ -55,7 +55,7 @@ redisCLI.connect();
 //application endpoints
 app.get("/", async (req, res) => {
   const val = await redisCLI.get("myNum");
-  res.send(`<h1> Hello megz</h1>${val}`);
+  res.send(`<h1>changes reflected on new image unsing docker hub</h1>`);
 });
 
 app.listen(PORT, () => console.log(`app is up and running on PORT : ${PORT}`));
