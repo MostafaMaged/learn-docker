@@ -56,7 +56,7 @@ redisCLI.connect();
 //application endpoints
 app.get("/", async (req, res) => {
   const val = await redisCLI.get("myNum");
-  res.send(`<h1>aftermath ip container ${os.hostname}</h1>`);
+  res.send(`<h1>aftermath new image ip container ${os.hostname}</h1>`);
 });
 
 app.listen(PORT, () => console.log(`app is up and running on PORT : ${PORT}`));
