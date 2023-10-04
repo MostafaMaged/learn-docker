@@ -2,9 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const redis = require("redis");
 const pgp = require("pg-promise")();
+const os = require("os");
 
 //init app
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 //connect postgresql
@@ -55,7 +56,7 @@ redisCLI.connect();
 //application endpoints
 app.get("/", async (req, res) => {
   const val = await redisCLI.get("myNum");
-  res.send(`<h1>changes reflected on new image unsing docker hub</h1>`);
+  res.send(`<h1>aftermath ip container ${os.hostname}</h1>`);
 });
 
 app.listen(PORT, () => console.log(`app is up and running on PORT : ${PORT}`));
